@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Circuitools.MainPage"
+             BackgroundImageSource="FND.jpg"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Margin" Value="6,0,0,0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollView Grid.Row="1" Grid.RowSpan="3">
+            <StackLayout VerticalOptions="Center" Padding="40">
+                <Label Text="Login" FontSize="50"/>
+                <Grid>
+                    <Entry x:Name="ETY1" Placeholder="User"/>
+                </Grid>
+                <Grid>
+                    <Entry x:Name="ETY2" Placeholder="Pass" IsPassword="True"/>
+                </Grid>
+                <Label x:Name="LB1" Text="Loss Pwd?" HorizontalOptions="End" TextColor="Red" TextDecorations="Underline"/>
+                <Button x:Name="BT1" Text="Entrar" CornerRadius="45" BackgroundColor="#E1EDEF" Clicked="BT1_Clicked"/>
+                <Label x:Name="LB2" HorizontalOptions="Start" TextDecorations="Underline"/>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

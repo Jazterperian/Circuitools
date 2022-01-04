@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MD\CCC.png" />
+    <None Remove="MD\CCV.png" />
+    <None Remove="MD\FC.png" />
+    <None Remove="MD\FV.png" />
+    <None Remove="MD\NT.png" />
+    <None Remove="MD\R.png" />
+    <None Remove="MD\TR.png" />
+    <None Remove="MD\VCC.png" />
+    <None Remove="MD\VCV.png" />
+    <None Remove="MD\Z.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="MD\CCC.png" />
+    <EmbeddedResource Include="MD\CCV.png" />
+    <EmbeddedResource Include="MD\FC.png" />
+    <EmbeddedResource Include="MD\FV.png" />
+    <EmbeddedResource Include="MD\NT.png" />
+    <EmbeddedResource Include="MD\R.png" />
+    <EmbeddedResource Include="MD\TR.png" />
+    <EmbeddedResource Include="MD\VCC.png" />
+    <EmbeddedResource Include="MD\VCV.png" />
+    <EmbeddedResource Include="MD\Z.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="1.3.2" />
+    <PackageReference Include="SkiaSharp" Version="2.80.2" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+</Project>
